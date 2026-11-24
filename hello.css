@@ -1,0 +1,460 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("hello.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    font-size: 50px;
+    margin-top: 0;
+    color: rgba(240, 240, 240, 0.8);
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.google {
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    outline: none;
+    backdrop-filter: blur(12px);
+    border: none;
+    transition: all 0.5s ease;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.google:hover {
+    width: 700px;
+    height: 50px;
+}
+
+.google:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 700px;
+    height: 50px;
+}
+
+.paginas {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+.tarjeta {
+    padding: 12px 20px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    color: white;
+    text-decoration: none;
+    font-family: system-ui, sans-serif;
+    transition: transform 0.2s, background-color 0.3s;
+    justify-content: center;
+}
+
+.tarjeta:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.reloj {
+    display: flex;
+    font-size: 200px;
+    color: rgba(240, 240, 240, 0.8);
+    justify-content: center;
+    margin-top: -150px;
+    line-height: 1;
+}
+
+.fecha {
+    font-size: 24px;
+    color: rgba(240, 240, 240, 0.8);
+    margin-bottom: 20px;
+    font-family: system-ui, sans-serif;
+    line-height: 1.1;
+}
+
+.confi {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 100;
+}
+
+.B_confi {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.2s ease;
+}
+
+.confi:hover .B_confi {
+    opacity: 1;
+}
+
+.B_confi:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: rotate(360deg);
+}
+
+.B_confi img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100vh;
+    background-color: rgba(20, 20, 20, 0.3);
+    backdrop-filter: blur(16px);
+    color: #ffffff;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: -8px 0 25px rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    font-family: system-ui, sans-serif;
+    z-index: 200;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow-y: auto;
+}
+
+.menu-contenido {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.menu-contenido::-webkit-scrollbar {
+    display: none;
+}
+
+.menu.activo {
+    transform: translateX(0);
+    box-shadow: -8px 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.menu h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.cerrar-menu {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cerrar-menu:hover {
+    color: #ffffff;
+}
+
+.notas-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.notas-sidebar label {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.notas {
+    width: 100%;
+    height: 220px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    resize: vertical;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.notas::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.notas:focus {
+    background-color: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+
+.pomodoro-sidebar {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.pomodoro-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.pomo-modo {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.pomo-tiempo {
+    font-size: 46px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+.pomodoro-botones {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.pomo-btn {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pomo-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.pomo-btn.secundario {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pomo-btn.secundario:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Todo-list {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.todoheader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.mas {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-family: system-ui, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.mas:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.todoform {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    box-sizing: border-box;
+    max-height: 0;
+    opacity: 0;
+    padding: 0 8px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.25s ease, padding 0.3s ease;
+}
+
+.todoform.activo {
+    max-height: 55px;
+    opacity: 1;
+    padding: 6px 8px;
+}
+
+.controles{
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.grupodia {
+    display: flex;
+    gap: 6px;
+    align-items: left;
+    flex-direction: column;
+    display: flex;
+}
+
+.todotitulo {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+    color: white;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.todotitulo::placeholder {
+    color: rgba(230,230,230,0.8);
+    font-size: 15px;
+}
+
+
+.dia {
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+    color: white;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.dia::placeholder {
+    color: rgba(230,230,230,0.8);
+    font-size: 15px;
+}
+.mes {
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+    color: white;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.mes::placeholder {
+    color: rgba(230,230,230,0.8);
+    font-size: 15px;
+}
+.agregar {
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+    color: white;
+    border-color: rgba(255, 255, 255, 0);
+    color: rgba(230,230,230,0.8);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.lista-tareas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+}
+.lista-tareas li {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.lista-tareas li:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.grupodia h4 {
+    font-size: 20px;
+    justify-content: left;
+}

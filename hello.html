@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="hello.css">
+</head>
+<body>
+  <main class="contenedor">
+    <div id="reloj" class="reloj"></div>
+    <div id="fecha" class="fecha"></div>
+    <div id="tempo" class="clima"></div>
+    <h1>Hola, ¿qué buscas hoy?</h1>
+    <form action="https://google.com" method="GET">
+      <input type="hidden" name="source" value="hp">
+      <input type="hidden" name="ie" value="UTF-8">
+      <input 
+        type="text" 
+        name="q" 
+        class="google" 
+        placeholder="" 
+        autocomplete="off" 
+        autofocus
+      >
+    </form>
+  </main>
+
+  <div class="paginas">
+    <a href="https://youtube.com" class="tarjeta">YouTube</a>
+    <a href="https://x.com" class="tarjeta">X</a>
+    <a href="https://github.com" class="tarjeta">GitHub</a>
+    <a href="https://twitch.tv" class="tarjeta">Twitch</a>
+  </div>
+
+  <div id="menu" class="menu">
+    <div class="menu-header">
+      <h3>Widgets</h3>
+      <button id="cerrar-menu" class="cerrar-menu">✕</button>
+    </div>
+
+    <div class="menu-contenido">
+      <div class="notas-sidebar">
+        <label for="notas"></label>
+        <textarea
+          id="notas"
+          class="notas"
+          placeholder="Escribe tus notas aquí..."
+        ></textarea>
+      </div>
+      <div class="pomodoro-sidebar">
+        <div class="pomodoro-header">
+          <span>Temporizador Pomodoro</span>
+          <span id="pomo-modo" class="pomo-modo">Enfoque</span>
+        </div>
+        <div id="pomo-tiempo" class="pomo-tiempo">25:00</div>
+        <div class="pomodoro-botones">
+          <button id="pomo-iniciar" class="pomo-btn">Iniciar</button>
+          <button id="pomo-reiniciar" class="pomo-btn secundario">Reiniciar</button>
+          <button id="pomo-cambiar" class="pomo-btn secundario" title="Cambiar entre Enfoque y Descanso">⇄</button>
+        </div>
+      </div>
+
+      <div class="Todo-list">
+        <div class="todoheader">
+          <span>Calendario</span>
+          <button id="mas" class="mas">+</button>
+        </div>
+        
+        <div id="todoform" class="todoform">
+          <input type="text" id="titulo" class="todotitulo" placeholder="Titulo">
+          <input type="text" inputmode="numeric" maxlength="2" id="dia" class="dia" placeholder="dd">
+          <input type="text" inputmode="numeric" maxlength="2" id="mes" class="mes" placeholder="mm">
+          <button id="agregar" class="agregar">Agregar</button>
+        </div>
+        <div id="dias" class="dias">
+          <div class="grupodia">
+            <h4>Hoy</h4>
+            <ul id="listahoy" class="lista-tareas"></ul>
+          </div>
+          <div class="grupodia">
+            <h4>Mañana</h4>
+            <ul id="listamanana" class="lista-tareas"></ul>
+          </div>
+          <div class="grupodia">
+            <h4>Después</h4>
+            <ul id="listadespues" class="lista-tareas"></ul>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="confi" id="confi">
+    <button id="B_confi" class="B_confi">
+      <img src="confi.png" alt="Configuración">
+    </button>
+  </div>
+
+  <script src="hello.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "NewTab",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "author": "Pablo Perez",
+  "manifest_version": 3,
+  "permissions": ["storage"],
+  "chrome_url_overrides":{
+    "newtab": "hello.html"
+  }
+}
